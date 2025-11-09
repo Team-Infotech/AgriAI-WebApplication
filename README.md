@@ -22,5 +22,4 @@ AI-powered agriculture platform connecting farmers and buyers for crop trading, 
 
 🖥 Frontend: **React + Tailwind + Axios + Recharts**
 
-*(and keep the rest of your detailed content exactly as you had it before)*
 
