@@ -6,7 +6,7 @@ AI-powered agriculture platform connecting farmers and buyers for crop trading, 
 
 ## 🧩 Project Overview
 
-You are building a full-stack web application called **AgriAI**, where:
+ Building a full-stack web application called **AgriAI**, where:
 
 👨‍🌾 Farmers can register, log in, and post their crops for sale (with quantity, price, image, and description).
 
