@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AgriAI - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>AgriAI Demo</h1>
+
+      <section id="auth">
+        <h2>Auth</h2>
+        <input id="name" placeholder="Name" />
+        <input id="email" placeholder="Email" />
+        <input id="password" placeholder="Password" type="password" />
+        <select id="role"><option value="buyer">Buyer</option><option value="farmer">Farmer</option></select>
+        <button id="register">Register</button>
+        <button id="login">Login</button>
+        <div id="userInfo"></div>
+      </section>
+
+      <section id="products">
+        <h2>Products</h2>
+        <div id="productForm" style="display:none">
+          <input id="title" placeholder="Title" />
+          <input id="price" placeholder="Price" type="number" />
+          <input id="quantity" placeholder="Quantity" type="number" />
+          <button id="addProduct">Add Product</button>
+        </div>
+        <div id="productList"></div>
+      </section>
+
+      <section id="predict">
+        <h2>Predict Price</h2>
+        <input id="crop" placeholder="Crop name (e.g., wheat)" />
+        <button id="predictBtn">Predict</button>
+        <div id="prediction"></div>
+      </section>
+    </div>
+  <script src="app.js"></script>
+  <div id="root" style="display:none"></div>
+  <!-- If you run the React app separately, it will use src/index.js -->
+  </body>
+</html>

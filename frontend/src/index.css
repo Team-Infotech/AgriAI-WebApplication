@@ -1,0 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html, body, #root { height: 100%; }
+
+/* small helper */
+.card { @apply bg-white p-4 rounded shadow-sm }

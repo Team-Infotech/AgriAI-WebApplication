@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  price_predictor:
+    build:
+      context: .
+      dockerfile: price_predictor/Dockerfile
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    depends_on:
+      - mongo
+      - price_predictor
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/agri_ai
+      - JWT_SECRET=your_secret_key
+      - FLASK_API_URL=http://price_predictor:5001/predict
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
